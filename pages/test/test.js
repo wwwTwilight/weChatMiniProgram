@@ -19,7 +19,7 @@ Page({
     ],
 
     showList : [
-      { id: 1, title: '图书', image: '/images/book.jpg' },
+      { id: 1, title: '图书', image: '/images/crystal.png' },
       { id: 2, title: '本人', image: '/images/head.jpg' },
       { id: 3, title: '未花', image: '/images/mika.jpg' }
     ],
