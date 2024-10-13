@@ -17,6 +17,12 @@ Page({
       { id: 3, title: '运动鞋', price: 200, image: '/images/shoes.jpg' },
       { id: 4, title: '编程书籍', price: 80, image: '/images/book.jpg' }
     ],
+
+    showList : [
+      { id: 1, title: '图书', image: '/images/book.jpg' },
+      { id: 2, title: '本人', image: '/images/head.jpg' },
+      { id: 3, title: '未花', image: '/images/mika.jpg' }
+    ],
     
     // 搜索输入框的值
     searchValue: ''

@@ -6,6 +6,16 @@
     <button style="width: 60px;" class="search-button">搜索</button>
   </view>
 
+<view class = "showBox" style="width : 300px">
+  <swiper class = "swiper" indicator-dots autoplay="{{true}}" interval="3000" duration="500">
+    <block wx:for="{{showList}}" wx:key="id">
+      <swiper-item>
+        <image class="swiper-image" src="{{item.image}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
   <!-- 分类导航 -->
   <view class="category-nav">
     <text style="margin-top: 5px; font-size: x-large;">分类:</text>
