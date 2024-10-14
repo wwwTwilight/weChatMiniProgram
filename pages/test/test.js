@@ -32,6 +32,7 @@ Page({
     this.setData({
       searchValue: event.detail.value
     });
+    console.log("搜索框内容：", this.data.searchValue);
   },
 
   onSearchTap() {
@@ -41,8 +42,8 @@ Page({
         title: '搜索功能未实现',
         icon: 'none'
       });
-      // 在这里你可以实现搜索逻辑，过滤商品列表
     }
+    console.log("点击了搜索按钮");
   },
 
   // 处理分类导航点击事件
