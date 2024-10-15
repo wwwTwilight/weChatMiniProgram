@@ -19,7 +19,7 @@
 
   <!-- 分类导航 -->
   <view class="category-nav">
-    <text style="margin-top: 5px; font-size: x-large;">分类:</text>
+    <text style="margin-top: 6px; font-size: x-large;">分类:</text>
     <scroll-view scroll-x class="nav-scroll">
       <button style = "width: auto; height: 40px; line-height: 35px;" class="nav-item" wx:for="{{categories}}" wx:key="id" bind:tap="onCategoryTap" data-category = "{{item}}">
         {{item}}
@@ -28,7 +28,7 @@
   </view>
 
   <!-- 商品列表 -->
-  <view class="goods-list">
+  <view class="goods-list" style="width : 350px">
     <view class="goods-item" wx:for="{{goods}}" wx:key="id" bind:tap="toItemDetail" data-url = "{{item.url}}">
       <image class="goods-image" src="{{item.image}}" />
       <view class="goods-info">
