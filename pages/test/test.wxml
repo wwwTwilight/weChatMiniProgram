@@ -7,11 +7,11 @@
   </view>
 
   <!-- 轮播图 -->
-<view class = "showBox" style="width : 300px">
+<view class = "showBox" style="align-items: center; justify-content: center; ">
   <swiper class = "swiper" indicator-dots autoplay="{{true}}" interval="3000" duration="500">
     <block wx:for="{{showList}}" wx:key="id">
       <swiper-item>
-        <image class="swiper-image" src="{{item.image}}" bind:tap = ""/>
+        <image class="swiper-image" src="{{item.image}}"/>
       </swiper-item>
     </block>
   </swiper>
@@ -29,11 +29,12 @@
 
   <!-- 商品列表 -->
   <view class="goods-list">
-    <view class="goods-item" wx:for="{{goods}}" wx:key="id">
+    <view class="goods-item" wx:for="{{goods}}" wx:key="id" bind:tap="toItemDetail" data-url = "{{item.url}}">
       <image class="goods-image" src="{{item.image}}" />
       <view class="goods-info">
         <text class="goods-title">{{item.title}}</text>
-        <text class="goods-price">¥{{item.price}}</text>
+        <text class="goods-price">{{item.price}}¥</text>
+        <!-- <text class="goods-url">{{item.url}}</text> -->
       </view>
     </view>
   </view>

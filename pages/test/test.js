@@ -1,23 +1,23 @@
 // pages/test/test.js
 Page({
 
-  /**
+  /*
    * 页面的初始数据
    */
 
 
   data: {
-    // 模拟分类数据
+    // 分类数据
     categories: ['电子产品', '家具', '服装', '书籍', '运动器材', '杂物', '校园网设备'],
     
-    // 模拟商品数据
+    // 商品数据
     goods: [
-      { id: 1, title: 'iPhone 12 二手', price: 4000, image: '/images/iphone12.jpg' },
-      { id: 2, title: '沙发', price: 1500, image: '/images/sofa.jpg' },
-      { id: 3, title: '运动鞋', price: 200, image: '/images/shoes.jpg' },
-      { id: 4, title: '编程书籍', price: 80, image: '/images/book.jpg' }
+      { id: 1, title: 'iPhone 12 二手', price: 4000, image: '/images/iphone12.jpg', url: '/pages/list/list' },
+      { id: 2, title: '沙发', price: 1500, image: '/images/sofa.jpg', url: '/pages/list/list' },
+      { id: 3, title: '运动鞋', price: 200, image: '/images/shoes.jpg', url: '/pages/list/list' },
+      { id: 4, title: '编程书籍', price: 80, image: '/images/book.jpg', url: '/pages/list/list' }
     ],
-
+    // 轮播图数据
     showList : [
       { id: 1, title: '图书', image: '/images/crystal.png' },
       { id: 2, title: '本人', image: '/images/head.jpg' },
@@ -39,7 +39,7 @@ Page({
     const searchValue = this.data.searchValue;
     if (searchValue) {
       wx.showToast({
-        title: '搜索功能未实现',
+        title: '搜索功能待完成',
         icon: 'none'
       });
     }
@@ -57,6 +57,26 @@ Page({
     // 这里可以实现根据分类加载相应商品的逻辑
   },
 
+  toItemDetail(event) {
+    const url = event.currentTarget.dataset.url;
+    console.log("url:", url);
+    wx.navigateTo({
+      url: url,
+    
+      success: function(res) {
+        console.log("跳转成功");
+      },
+    
+      fail: function(res) {
+        console.log("跳转失败");
+      },
+    
+      complete: function(res) {
+        console.log("跳转结束");
+      },
+    
+     })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
