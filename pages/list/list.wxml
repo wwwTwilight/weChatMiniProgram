@@ -1,4 +1,5 @@
 <!--pages/list/list.wxml-->
 <view class = "itemTitle">商品页面</view>
-
-<image class="goods-image" src="/images/book.jpg" />
+<view class = "imageStyle">
+<image class="goods-image" src="/images/book.jpg" mode="aspectFill"/>
+</view>
