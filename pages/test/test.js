@@ -1,4 +1,5 @@
 // pages/test/test.js
+var app = getApp();
 Page({
 
   /*
@@ -6,17 +7,13 @@ Page({
    */
 
 
-  data: {
+  data: 
+  {
     // 分类数据
     categories: ['电子产品', '家具', '服装', '书籍', '运动器材', '杂物', '校园网设备'],
     
     // 商品数据
-    goods: [
-      { id: 1, title: 'iPhone 12 二手', price: 4000, image: '/images/iphone12.jpg', url: '/pages/list/list' },
-      { id: 2, title: '沙发', price: 1500, image: '/images/sofa.jpg', url: '/pages/list/list' },
-      { id: 3, title: '运动鞋', price: 200, image: '/images/shoes.jpg', url: '/pages/list/list' },
-      { id: 4, title: '编程书籍', price: 80, image: '/images/book.jpg', url: '/pages/list/list' }
-    ],
+    goods: app.globalData.goods,
     // 轮播图数据
     showList : [
       { id: 1, title: '图书', image: '/images/crystal.png' },
@@ -28,14 +25,16 @@ Page({
     searchValue: ''
   },
 
-  onSearchInput(event) {
+  onSearchInput(event) 
+  {
     this.setData({
       searchValue: event.detail.value
     });
     console.log("搜索框内容：", this.data.searchValue);
   },
 
-  onSearchTap() {
+  onSearchTap() 
+  {
     const searchValue = this.data.searchValue;
     if (searchValue) {
       wx.showToast({
@@ -47,7 +46,8 @@ Page({
   },
 
   // 处理分类导航点击事件
-  onCategoryTap(event) {
+  onCategoryTap(event) 
+  {
     const category = event.currentTarget.dataset.category;
     wx.showToast({
       title: `你点击了分类: ${category}`,
@@ -57,8 +57,13 @@ Page({
     // 这里可以实现根据分类加载相应商品的逻辑
   },
 
-  toItemDetail(event) {
-    const url = event.currentTarget.dataset.url;
+  toItemDetail(event) 
+  {
+    var url = event.currentTarget.dataset.url;
+    var image = event.currentTarget.dataset.image;
+    var price = event.currentTarget.dataset.price;
+    var title = event.currentTarget.dataset.title;
+    url += `?image=${image}&price=${price}&title=${title}`;
     console.log("url:", url);
     wx.navigateTo({
       url: url,

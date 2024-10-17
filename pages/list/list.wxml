@@ -1,5 +1,7 @@
 <!--pages/list/list.wxml-->
 <view class = "itemTitle">商品页面</view>
 <view class = "imageStyle">
-<image class="goods-image" src="/images/book.jpg" mode="aspectFill"/>
+<image class="goods-image" src="{{image}}" mode="aspectFill"/>
 </view>
+<view class = "goods-price">卖家建议价格: {{price}} ¥</view>
+<view class = "goods-title">{{title}}</view>
