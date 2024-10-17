@@ -37,7 +37,7 @@
 .search-button {
   margin-left: 10px;
   padding: 10px 10px 10px 10px;
-  background-color: #1aad19;
+  background-color: rgb(255, 224, 47);
   color: white;
   border: red;
   border-radius: 5px;
@@ -52,7 +52,7 @@
 .nav-scroll {
   width: 300px;
   height: 40px;
-  border: green 1px solid;
+  border: rgb(255, 224, 47) 5px solid;
   display: flex; /* 使用flex布局来保证子项的横向排列 */
   white-space:nowrap;
 }
