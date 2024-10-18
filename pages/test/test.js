@@ -22,7 +22,11 @@ Page({
     ],
     
     // 搜索输入框的值
-    searchValue: ''
+    searchValue: '',
+
+    searchInputColor: '',
+
+    searchInputShadow: ''
   },
 
   onSearchInput(event) 
@@ -31,6 +35,28 @@ Page({
       searchValue: event.detail.value
     });
     console.log("搜索框内容：", this.data.searchValue);
+  },
+
+  onSearchFocus(event)
+  {
+    this.setData({
+      searchInputColor: '#F5F5F5'
+    });
+    this.setData({
+      searchInputShadow: '13px 13px 10px #969696, -13px -13px 10px #ffffff;'
+    });
+    console.log("搜索框获得焦点");
+  },
+
+  onSearchBlur(event)
+  {
+    this.setData({
+      searchInputColor: '#ccc'
+    });
+    this.setData({
+      searchInputShadow: 'inset 2px 5px 10px rgba(0,0,0,0.3)'
+    });
+    console.log("搜索框获得焦点");
   },
 
   onSearchTap() 
