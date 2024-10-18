@@ -21,9 +21,25 @@
 /* 搜索栏样式 */
 .search-bar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+  margin : 10px;
+}
+
+.search-bar button
+{
+  line-height: 30px;
+}
+
+.search-bar > .search-input {
+  border: none;
+  outline: none;
+  width: 240px;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  /* box-shadow: 13px 13px 100px #969696,
+              -13px -13px 100px #ffffff; */
+  transition: 300ms ease-in-out;
 }
 
 .search-input {

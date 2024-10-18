@@ -2,8 +2,8 @@
 <view class="container">
   <!-- 搜索栏 -->
   <view class="search-bar">
-    <input class="search-input" placeholder="搜索二手商品" name = "title" bindinput = "onSearchInput"></input>
-    <button style="width: 60px;" class="search-button" bind:tap = "onSearchTap" >搜索</button>
+    <input class="search-input" placeholder="搜索二手商品" name = "title" bindinput = "onSearchInput" bindfocus="onSearchFocus" bindblur="onSearchBlur" style = "background-color : {{searchInputColor}}; box-shadow : {{searchInputShadow}} "></input>
+    <button style="width: 60px; height: 50px; margin-top: 2px; " class="search-button" bind:tap = "onSearchTap" >搜索</button>
   </view>
 
   <!-- 轮播图 -->
