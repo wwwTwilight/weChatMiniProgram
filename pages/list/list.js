@@ -1,18 +1,31 @@
 // pages/list/list.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    goods: app.globalData.goods,
+    price: '',
+    image: '',
+    title: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    console.log(options.image);
+    this.setData({
+      image: options.image
+    })
+    this.setData({
+      price: options.price
+    })
+    this.setData({
+      title: options.title
+    })
   },
 
   /**
