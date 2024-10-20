@@ -1,12 +1,9 @@
 <view class="container">
   <view class="header">
     <view class="header-top">
-      <view class="header-title">消息</view>
+      <view class="header-title">消 息</view>
     </view>
-    <view class="search-bar">
-      <icon type="search" size="14"></icon>
-      <input type="text" placeholder="搜索" bindinput="onSearchInput" value="{{searchText}}" />
-    </view>
+
   </view>
   
   <scroll-view scroll-y="true" class="contact-list">

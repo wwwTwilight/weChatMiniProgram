@@ -14,8 +14,8 @@
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "二手交易平台",
-    "navigationBarBackgroundColor": "#f3bad4"
+  
+    "navigationBarBackgroundColor": "#ffff"
   },
   "style": "v2",
   "componentFramework": "glass-easel",

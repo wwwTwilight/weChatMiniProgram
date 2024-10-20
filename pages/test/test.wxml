@@ -1,5 +1,8 @@
-<!-- pages/test/test.wxml -->
-<!-- 搜索栏 -->
+<view class="header">
+    <view class="header-top">
+      <view class="header-title">消 息</view>
+    </view>
+</view>
 <view id="content">
   <view class="search-bar">
       <input class="search-input" placeholder="搜索二手商品" name="title" bindinput="onSearchInput" bindfocus="onSearchFocus" bindblur="onSearchBlur" style="background-color: {{searchInputColor}}; box-shadow: {{searchInputShadow}}"></input>
@@ -8,23 +11,20 @@
       </button>
   </view>
   <view class="container">
-    <block wx:for="{{blossoms}}" wx:key="id">
-    <view class="blossom" style="width: {{item.size}}rpx; height: {{item.size}}rpx; left: {{item.left}}%; animation-duration:{{item.animationDuration}}s;animation-delay:{{item.animationDelay}}s;"></view>
-
-  </block>
+  
     <view class="showBox" style="align-items: center; justify-content: center;">
       <swiper class="swiper" indicator-dots autoplay="{{true}}" interval="3000" duration="500">
         <block wx:for="{{showList}}" wx:key="id">
           <swiper-item>
-            <image class="swiper-image" src="{{item.image}}"/>
+            <image class="swiper-image" mode = "aspectFill" src="{{item.image}}"/>
           </swiper-item>
         </block>
       </swiper>
     </view>
 
     <!-- 分类导航 -->
-    <view class="category-nav">
-      <text style="margin-top: 6px; font-size: x-large;">分类:</text>
+    <view class="category-nav" style="align-items: center;">
+      <text style=" font-size: x-large;font-family:华文琥珀;">分类:</text>
       <scroll-view scroll-x class="nav-scroll">
         <button style="width: auto; height: 40px; line-height: 35px;" class="nav-item" wx:for="{{categories}}" wx:key="id" bind:tap="onCategoryTap" data-category="{{item}}">
           {{item}}

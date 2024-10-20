@@ -1,29 +1,12 @@
 /* pages/test/test.wxss */
 #content {
-  background: linear-gradient(to bottom, #e6f3ff, #b3d9ff);
-  min-height: 100vh; /* 确保至少覆盖整个视口高度 */
+  background:linear-gradient(-45deg, #e6f3ff, #b3d9ff, #bbe7f5, #a5e9d9);
+  min-height: 100%;
+  width: 100%; /* 确保至少覆盖整个视口高度 */
   padding-top: 70px; /* 给搜索栏留出空间 */
   position: relative; /* 确保内容可以相对定位 */
 }
-.blossom {
-  position: absolute;
-  border-radius: 50%;
-  background-color: rgba(255, 192, 203, 0.8);
-  animation: fall linear infinite;
-}
 
-@keyframes fall {
-  0% {
-    top: -10rpx;
-    transform: translateX(0) rotate(0deg);
-    opacity: 0.8;
-  }
-  100% {
-    top: 100vh;
-    transform: translateX(100rpx) rotate(360deg);
-    opacity: 0;
-  }
-}
 .search-bar {
   top: 0;
   position: fixed; /* 固定在顶部 */
@@ -31,7 +14,7 @@
   display: flex;
   padding: 10px; /* 增加内边距 */
   z-index: 999; /* 确保在最上层 */
-  background-color: #f3f3f3; /* 背景颜色确保可见 */
+  background-color: #ffffff; /* 背景颜色确保可见 */
   align-items: center;
   justify-content: center;
 }
@@ -43,7 +26,7 @@
   max-width: 350px; /* 设置最大宽度 */
   border-radius: 15px;
   padding: 10rpx; /* 减少内边距 */
-  background-color: #ccc;
+  background-color:#ffffff;
   box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
   transition: 300ms ease-in-out;
 
@@ -54,7 +37,7 @@
 }
 .search-button {
   padding: 10px 10px; /* 增加水平内边距 */
-  color: white;
+  color: #ffffff;
   border: none; 
   border-radius: 5px;
   display: flex; /* 让图标居中 */
@@ -67,6 +50,7 @@
 }
 
 .container {
+  width: 100%;
   position: relative;
   padding: 10px;
 }
@@ -93,15 +77,17 @@
 
 /* 分类导航样式 */
 .category-nav {
-  margin-bottom: 0px;
+
   display: flex;
 }
 
 .nav-scroll {
   width: 300px;
   height: 40px;
-  border: rgb(255, 224, 47) 5px solid;
-  display: flex; /* 使用flex布局来保证子项的横向排列 */
+  border: rgb(153, 147, 112) 5px solid;
+  border-radius: 20rpx;
+  background-color: burlywood;
+  display: flex;
   white-space: nowrap;
 }
 
@@ -115,22 +101,36 @@
   display: inline-block;
 }
 
-/* 商品列表样式 */
+
 .goods-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  width: 100%;
+  margin-top: 20rpx;
+
 }
 
 .goods-item {
+  width: 100%;
   display: flex;
-  padding: 10px;
-  border-bottom: 1px solid #eee;
+  padding: 10px; 
+  border: 2px solid black; 
+  box-shadow: 4px 4px black; 
+  margin-bottom: 10px; 
+  gap: 20px;
+  border-radius: 5px;
 }
+
 
 .goods-image {
   width: 100px;
   height: 100px;
   margin-right: 10px;
+  border: 2px solid black;
+  box-shadow: 4px 4px black;
+  gap: 20px;
+  border-radius: 5px;
 }
 
 .goods-info {

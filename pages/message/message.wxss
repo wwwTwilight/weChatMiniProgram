@@ -2,13 +2,17 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
 }
 
 .header {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: lightblue;
   padding: 10px 15px;
   color: white;
+  margin-bottom: 10rpx;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6), 
+              2px 2px 0 rgba(0, 0, 0, 0.5),
+              3px 3px 0 rgba(0, 0, 0, 0.4);
 }
 
 .header-top {
@@ -19,28 +23,14 @@
 }
 
 .header-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
+  text-shadow: 
+    1px 1px 0 rgba(0, 0, 0, 0.6), 
+    2px 2px 0 rgba(0, 0, 0, 0.5),
+    3px 3px 0 rgba(0, 0, 0, 0.4);
 }
 
-.search-bar {
-  display: flex;
-  align-items: center;
-  border-radius: 30px;
-  background: rgb(255, 255, 255);
-  box-shadow: rgba(45, 45, 61, 0.25) 0px 30px 50px -12px, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
-  border-radius: 20px;
-  padding: 8px 10px;
-}
-
-.search-bar icon {
-  margin-right: 5px;
-}
-
-.search-bar input {
-  flex: 1;
-  font-size: 14px;
-}
 
 .contact-list {
   flex: 1;
@@ -48,16 +38,11 @@
 }
 
 .contact-item {
-  margin: 2rpx;
   display: flex;
   align-items: center;
-  padding: 15rpx;
-  width: 95%;
-  background-color: white;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border: 2rpx solid #000000;
-
+  padding: 30rpx 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  transition: background-color 0.3s;  
 }
 
 .contact-avatar {
