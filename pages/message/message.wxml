@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="header">
+    <view class="header-top">
+      <view class="header-title">消息</view>
+    </view>
+    <view class="search-bar">
+      <icon type="search" size="14"></icon>
+      <input type="text" placeholder="搜索" bindinput="onSearchInput" value="{{searchText}}" />
+    </view>
+  </view>
+  
+  <scroll-view scroll-y="true" class="contact-list">
+    <view wx:for="{{filteredContacts}}" wx:key="index" class="contact-item" bindtap="onContactTap" data-index="{{index}}">
+      <image class="contact-avatar" src="{{item.avatarUrl}}" mode="aspectFill" />
+      <view class="contact-info">
+        <view class="contact-name">{{item.name}}</view>
+        <view class="contact-message">{{item.lastMessage}}</view>
+      </view>
+      <view class="unread-count" wx:if="{{item.unreadCount > 0}}">{{item.unreadCount}}</view>
+    </view>
+  </scroll-view>
+</view>

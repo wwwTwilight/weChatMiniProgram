@@ -1,17 +1,46 @@
 {
   "pages": [
     "pages/test/test",
-    "pages/list/list",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/mine/mine",
+    "pages/about/about",
+    "pages/campusAddress/campusAddress",
+    "pages/message/message",
+    "pages/myTrades/myTrades",
+    "pages/chat/chat",
+    "pages/friends/friends",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/list/list"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarBackgroundColor": "#ffffff"
+    "navigationBarTitleText": "二手交易平台",
+    "navigationBarBackgroundColor": "#f3bad4"
   },
   "style": "v2",
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/test/test",
+        "text": "首页",
+        "iconPath": "/assets/image/bank_building_icon_263681.png",
+        "selectedIconPath": "/assets/image/bank_building_icon_263793.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "聊天",
+        "iconPath": "/assets/image/miyajima_torii_building_icon_263752.png",
+        "selectedIconPath": "/assets/image/miyajima_torii_building_icon_263780.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/assets/image/statue_of_liberty_building_icon_263759.png",
+        "selectedIconPath": "/assets/image/statue_of_liberty_building_icon_263775.png"
+      }
+    ]
+  }
 }

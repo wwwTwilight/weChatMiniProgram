@@ -1,0 +1,72 @@
+<!-- 我的 -->
+<view id="mine">
+  <view class="header">
+    <view class="user">
+      <image class="user" src="/assets/image//testuser.png"></image>
+      <view class="name" bind:tap="navigateToLogin">{{isLoggedIn ? username : '登录/注册'}}</view>
+    </view>
+    <view class="nav">
+      <view class="nav_item">
+        <view>0</view>
+        <view>信用点</view>
+      </view>
+      <view class="nav_item">
+        <view>0</view>
+        <view>交易数</view>
+      </view>
+      <view class="nav_item">
+        <view>0</view>
+        <view>消息</view>
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="list-item" bindtap="navigateToMyTrades">
+      <image class="list-icon" src="/assets/image/my.png"></image>
+      <text>我的交易</text>
+      <image class="arrow" src="/assets/image/arrow.png"></image>
+    </view>
+    <view class="list-item" bindtap="navigateToMessages">
+      <image class="list-icon" src="/assets/image/message.png"></image>
+      <text>重复了（暂定）</text>
+      <image class="arrow" src="/assets/image/arrow.png"></image>
+    </view>
+    <view class="list-item" bindtap="navigateToCampusAddress">
+      <image class="list-icon" src="/assets/image/address.png"></image>
+      <text>个人信息</text>
+      <image class="arrow" src="/assets/image/arrow.png"></image>
+    </view>
+    <view class="list-item" bindtap="navigateToAbout">
+      <image class="list-icon" src="/assets/image/about.png"></image>
+      <text>关于</text>
+      <image class="arrow" src="/assets/image/arrow.png"></image>
+    </view>
+  </view>
+
+  <!-- 浮动的添加按钮 -->
+  <view class="float-button" bindtap="showModal">
+  <image class="button-image" src="/assets/image/cube.svg" mode="aspectFit"></image>
+</view>
+
+  <!-- 模态窗口 -->
+  <view class="modal" wx:if="{{isModalVisible}}">
+    <view class="modal-content">
+      <view class="modal-header">
+        <text>发起新交易</text>
+        <view class="close-button" bindtap="hideModal">×</view>
+      </view>
+      <view class="modal-body">
+        <input placeholder="物品名称" bindinput="handleInput" data-field="name" value="{{newTrade.name}}"/>
+        <input placeholder="价格" type="digit" bindinput="handleInput" data-field="price" value="{{newTrade.price}}"/>
+        <input placeholder="分类标签" bindinput="handleInput" data-field="category" value="{{newTrade.category}}"/>
+        <input placeholder="地址" bindinput="handleInput" data-field="address" value="{{newTrade.address}}"/>
+        <input placeholder="电话号码" type="number" bindinput="handleInput" data-field="phone" value="{{newTrade.phone}}"/>
+        <button bindtap="chooseImage">上传物品图片</button>
+        <image wx:if="{{newTrade.image}}" src="{{newTrade.image}}" mode="aspectFit" class="preview-image"></image>
+      </view>
+      <view class="modal-footer">
+        <button bindtap="submitTrade">提交</button>
+      </view>
+    </view>
+  </view>
+</view>

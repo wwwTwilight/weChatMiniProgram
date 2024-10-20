@@ -2,13 +2,17 @@
 var app = getApp();
 Page({
 
-  /*
-   * 页面的初始数据
-   */
+  switchTab(event) {
+    const page = event.currentTarget.dataset.page;
+    wx.switchTab({
+      url: `/pages/${page}/${page}`
+    });
+  },
 
 
   data: 
   {
+    blossoms: [],
     // 分类数据
     categories: ['电子产品', '家具', '服装', '书籍', '运动器材', '杂物', '校园网设备'],
     
@@ -16,9 +20,9 @@ Page({
     goods: app.globalData.goods,
     // 轮播图数据
     showList : [
-      { id: 1, title: '图书', image: '/images/crystal.png' },
-      { id: 2, title: '本人', image: '/images/head.jpg' },
-      { id: 3, title: '未花', image: '/images/mika.jpg' }
+      { id: 1, title: '图书', image: '/assets/image/book.jpg' },
+      { id: 2, title: '本人', image: '/assets/image/shoes.jpg' },
+      { id: 3, title: '未花', image: '/assets/image/mika.jpg' }
     ],
     
     // 搜索输入框的值
@@ -162,5 +166,15 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  onLoad: function() {
+    const blossoms = Array.from({ length: 50 }, (_, i) => ({
+      id: i,
+      size: 10 + Math.random() * 20,
+      left: Math.random() * 100,
+      animationDuration: 5 + Math.random() * 10,
+      animationDelay: Math.random() * 5
+    }));
+    this.setData({ blossoms });
   }
 })
