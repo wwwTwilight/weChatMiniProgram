@@ -15,10 +15,10 @@ App({
   },
   globalData: {
     goods: [
-      { id: 1, title: 'iPhone 12 二手', price: 4000, image: '/images/mika.jpg', url: '/pages/list/list' },
-      { id: 2, title: '沙发', price: 1500, image: '/images/mika.jpg', url: '/pages/list/list' },
-      { id: 3, title: '运动鞋', price: 200, image: '/images/mika.jpg', url: '/pages/list/list' },
-      { id: 4, title: '编程书籍', price: 80, image: '/images/mika.jpg', url: '/pages/list/list' }
+      { id: 1, title: 'iPhone 12 二手', price: 4000, image: '/assets/image/mika.jpg', url: '/pages/list/list' },
+      { id: 2, title: '沙发', price: 1500, image: '/assets/image/mika.jpg', url: '/pages/list/list' },
+      { id: 3, title: '运动鞋', price: 200, image: '/assets/image/mika.jpg', url: '/pages/list/list' },
+      { id: 4, title: '编程书籍', price: 80, image: '/assets/image/mika.jpg', url: '/pages/list/list' }
     ],
   }
 })

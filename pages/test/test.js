@@ -13,15 +13,15 @@ Page({
   data: 
   {
     // 分类数据
-    categories: ['电子产品', '家具', '服装', '书籍', '运动器材', '杂物', '校园网设备'],
+    categories: ['电子产品', '家具', '服装', '书籍', '运动器材', '杂物', '校园网设备', '讲座票'],
     
     // 商品数据
     goods: app.globalData.goods,
     // 轮播图数据
     showList : [
-      { id: 1, title: '图书', image: '/images/book.jpg' },
-      { id: 2, title: '水晶', image: '/images/sofa.jpg' },
-      { id: 3, title: '未花', image: '/images/mika.jpg' }
+      { id: 1, title: '图书', image: '/assets/image/book.jpg' },
+      { id: 2, title: '水晶', image: '/assets/image/sofa.jpg' },
+      { id: 3, title: '未花', image: '/assets/image/mika.jpg' }
     ],
     
     // 搜索输入框的值
