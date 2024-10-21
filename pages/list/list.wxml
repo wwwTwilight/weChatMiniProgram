@@ -6,10 +6,10 @@
     </view>
     <view class = "goods-title">{{title}}</view>
     <view class = "goods-price">卖家建议价格: {{price}} ¥</view>
-    <view class = "sellerInfo">
+    <!-- <view class = "sellerInfo">
         <text >卖家昵称：</text>
         <text >卖家微信号：</text>
         <text >卖家地址：</text>
-    </view>
-    <button bindtap = "perchase" class="perchaseButton">立即下单</button>
+    </view> -->
+    <button bindtap = "perchase" class="perchaseButton">联系卖家</button>
 </view>
