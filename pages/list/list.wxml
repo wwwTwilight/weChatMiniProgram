@@ -1,7 +1,14 @@
 <!--pages/list/list.wxml-->
-<view class = "itemTitle">商品页面</view>
-<view class = "imageStyle">
-<image class="goods-image" src="{{image}}" mode="aspectFill"/>
+<!-- <view class = "itemTitle">商品页面</view> -->
+<view id = "content">
+    <view class = "imageStyle">
+    <image class="goods-image" src="{{image}}" mode="aspectFill"/>
+    </view>
+    <view class = "goods-title">{{title}}</view>
+    <view class = "goods-price">卖家建议价格: {{price}} ¥</view>
+    <view class = "description">
+        <text >卖家描述：</text>
+        <text >1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</text>
+    </view>
+    <button bindtap = "perchase" class="perchaseButton">联系卖家</button>
 </view>
-<view class = "goods-price">卖家建议价格: {{price}} ¥</view>
-<view class = "goods-title">{{title}}</view>
