@@ -19,9 +19,9 @@ Page({
     goods: app.globalData.goods,
     // 轮播图数据
     showList : [
-      { id: 1, title: '图书', image: '/assets/image/book.jpg' },
-      { id: 2, title: '水晶', image: '/assets/image/sofa.jpg' },
-      { id: 3, title: '未花', image: '/assets/image/mika.jpg' }
+      { id: 1, title: '图书', image: '/images/book.jpg' },
+      { id: 2, title: '水晶', image: '/images/sofa.jpg' },
+      { id: 3, title: '未花', image: '/images/mika.jpg' }
     ],
     
     // 搜索输入框的值
