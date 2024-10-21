@@ -47,7 +47,7 @@
   margin : 10px;
 }
 
-.sellerInfo
+.description
 {
   display: flex;
   width: 97%;
@@ -55,14 +55,16 @@
   border: 2px solid black; 
   box-shadow: 4px 4px black; 
   margin-bottom: 30px; 
-  gap: 20px;
   border-radius: 5px;
 }
 
-.sellerInfo text
+.description text
 {
-  margin: 10px;
-  font-size: 22px;
+  display: block;
+  text-overflow:ellipsis; 
+  word-wrap:break-word;
+  margin: 3px;
+  font-size: 18px;
   color: black;
   font-weight: 700;
 }
